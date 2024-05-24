@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mood Detector Game</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div
+      class="container d-flex flex-column justify-content-center align-items-center vh-100"
+    >
+      <div class="jumbotron text-center w-100 py-4">
+        <h1 class="display-4">Mood Detector Game</h1>
+        <p class="lead">Answer the questions to find out your mood!</p>
+      </div>
+
+      <div id="game" class="text-center w-100">
+        <form id="nameForm" class="form-inline justify-content-center mb-3">
+          <div class="form-group mx-sm-3 mb-2">
+            <label for="playerName" class="sr-only">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="playerName"
+              placeholder="Your name"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-primary mb-2">Start</button>
+        </form>
+
+        <div id="questionnaire" class="d-none">
+          <div id="progress" class="my-2">
+            <span id="currentQuestion"></span> /
+            <span id="totalQuestions"></span>
+          </div>
+          <div id="questionContainer" class="my-4"></div>
+        </div>
+
+        <div id="result" class="d-none">
+          <h2 id="resultMessage"></h2>
+          <button id="restartButton" class="btn btn-secondary mt-3">
+            Restart
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
