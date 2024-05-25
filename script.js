@@ -107,9 +107,9 @@ function displayResult() {
   const totalScore = scores.reduce((a, b) => a + b, 0);
   let mood = "";
   if (totalScore <= 15) {
-    mood = "happy";
-  } else if (totalScore <= 25) {
     mood = "anxious";
+  } else if (totalScore <= 25) {
+    mood = "happy";
   } else {
     mood = "stressed";
   }
